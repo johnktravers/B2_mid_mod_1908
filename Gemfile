@@ -41,6 +41,8 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'awesome_print'
+  gem 'simplecov'
 end
 
 group :development do
