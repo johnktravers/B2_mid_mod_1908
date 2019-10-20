@@ -6,4 +6,8 @@ RSpec.describe Instructor, type: :model do
     it { should validate_presence_of :name }
   end
 
+  describe 'relationships' do
+    it { should have_many(:students).through(:instructor_students) }
+  end
+
 end

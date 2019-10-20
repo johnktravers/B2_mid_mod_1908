@@ -12,5 +12,9 @@ RSpec.describe Student, type: :model do
 
     it { should validate_length_of(:cohort_num).is_equal_to(4) }
   end
-  
+
+  describe 'relationships' do
+    it { should have_many(:instructors).through(:instructor_students) }
+  end
+
 end
