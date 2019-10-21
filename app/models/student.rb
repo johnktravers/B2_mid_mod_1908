@@ -8,4 +8,8 @@ class Student < ApplicationRecord
 
   has_many :instructor_students
   has_many :instructors, through: :instructor_students
+
+  def self.average_age
+    average(:age)
+  end
 end
