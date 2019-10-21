@@ -7,7 +7,7 @@
     <p>Instructors:</p>
     <% student.instructors.each do |instructor| %>
       <ul>
-        <li><%= instructor.name %></li>
+        <li><%= link_to instructor.name, "/instructors/#{instructor.id}" %></li>
       </ul>
     <% end %>
   </section>
