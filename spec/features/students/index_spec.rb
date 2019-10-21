@@ -22,13 +22,13 @@ RSpec.describe 'students index page', type: :feature do
     within "#student-#{@barb.id}" do
       expect(page).to have_content(@barb.name)
       expect(page).to have_content("Cohort: #{@barb.cohort_num}")
-      expect(page).to have_content("Instructors:\n#{@greg.name}\n#{@rose.name}")
+      expect(page).to have_content("Instructors:\n#{@greg.name} #{@rose.name}")
     end
 
     within "#student-#{@nick.id}" do
       expect(page).to have_content(@nick.name)
       expect(page).to have_content("Cohort: #{@nick.cohort_num}")
-      expect(page).to have_content("Instructors:\n#{@erin.name}\n#{@rose.name}")
+      expect(page).to have_content("Instructors:\n#{@erin.name} #{@rose.name}")
     end
   end
 

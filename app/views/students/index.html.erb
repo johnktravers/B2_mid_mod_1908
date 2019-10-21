@@ -5,11 +5,11 @@
     <h3><%= student.name %></h3>
     <p>Cohort: <%= student.cohort_num %></p>
     <p>Instructors:</p>
-    <% student.instructors.each do |instructor| %>
-      <ul>
+    <ul>
+      <% student.instructors.each do |instructor| %>
         <li><%= link_to instructor.name, "/instructors/#{instructor.id}" %></li>
-      </ul>
-    <% end %>
+      <% end %>
+    </ul>
   </section>
   <br>
 <% end %>
